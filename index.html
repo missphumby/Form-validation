@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript Form Validation using a sample registration form</title>
+<meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+<link rel='stylesheet' href='style.css' type='text/css' />
+<!-- <script src="app.js"></script> -->
+</head>
+<body onload="document.registration.userid.focus()">
+<h1>Registration Form</h1>
+<!-- Use tab keys to move from one input field to the next. -->
+<form name='registration' 
+>
+<ul>
+<li><label for="userid">User id[5-7 Character]:</label></li>
+<li><input type="text" name="userid" size="12" onchange="userid_validation(5, 12)" required/></li>
+<li><label for="passid">Password:[8-12 Characters]</label></li>
+<li><input type="password" name="passid" size="12" onchange="passid_validation(8, 12)" required/></li>
+<li><label for="username">Name:[Alpabetes character]</label></li>
+<li><input type="text" name="username" size="50" onchange="allLetter()" required/></li>
+<li><label for="address">Address:[Alphanumeric characters]</label></li>
+<li><input type="text" name="address" size="50" onchange="alphanumeric()" required/></li>
+<li><label for="country">Country:[Must select a country]</label></li>
+<li><select name="country" onchange="countryselect()">
+    <option selected = "" value="Default">please select a country</option>
+    <option value="AF">AFGHANISTAN</option>
+    <option value="CN">CANADA</option>
+    <option value="NG">NIGERIA</option>
+    <option value="SA">SOUTH AFTRICA</option>
+    <option value="ET">ETHIOPIA</option>
+</select></li>
+<li><label for="zip">ZIP Code:[Numeric characters]</label></li>
+<li><input type="text" name="zip" onchange="allnumeric()" required/></li>
+<li><label for="email">Email:[Valid email]</label></li>
+<li><input type="text" name="email" size="50" onchange="ValidateEmail()" required/></li>
+<li><label id="gender" >Sex:[Select Male or Female]</label></li>
+<input type="radio"><span name="msex">Male</span>
+<input type="radio"><span name="fsex">Female</span>
+<li><label>Language:[Optional]</label></li>
+<input type="checkbox" checked><span name="en">English</span>
+<input type="checkbox"><span name="non-en">Non English</span>
+<li><label for="desc">About:[Optional]</label></li>
+<li><textarea name="desc" id="desc" ></textarea></li>
+<li><input type="submit" name="submit" value="Submit"  /></li>
+
+</ul>
+</form>
+
+
+
+
+
+
+<script src="form.js"></script>
+</body>
+
+
+
+</html>
